@@ -40,10 +40,10 @@ export const pageCreate = (
   >
     <TextField field="title" label="Title" />
     <RichTextField field="content" label="Content" />
-    {/* <FieldView
+    <FieldView
       field="title"
       render={(fieldAccessor) => <>{fieldAccessor.value}</>}
-    /> */}
+    />
   </CreatePage>
 );
 
