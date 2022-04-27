@@ -11,10 +11,11 @@ import "@contember/admin/style.css";
 const apiBaseUrl = import.meta.env.VITE_CONTEMBER_ADMIN_API_BASE_URL as string;
 const loginToken = import.meta.env.VITE_CONTEMBER_ADMIN_LOGIN_TOKEN as string;
 const projectSlug = import.meta.env.VITE_CONTEMBER_ADMIN_PROJECT_NAME as string;
+const sessionToken = import.meta.env.VITE_CONTEMBER_ADMIN_SESSION_TOKEN;
 import { csCZ } from "@contember/admin-i18n";
 
-// if (window.location.pathname === "/") {
-  if (window.location.hash === "#login") {
+if (window.location.pathname === "/") {
+  // if (window.location.hash === "#login") {
   // Login page
   runReactApp(
     <LoginEntrypoint
@@ -25,12 +26,12 @@ import { csCZ } from "@contember/admin-i18n";
       heading="ARES admin panel login"
     />
   );
-} else if (window.location.pathname.startsWith("/")) {
+} else if (window.location.pathname.startsWith("/" + projectSlug)) {
   runReactApp(
     <ApplicationEntrypoint
-      basePath={import.meta.env.BASE_URL}
+      basePath={`/${projectSlug}/`}
       apiBaseUrl={apiBaseUrl}
-      sessionToken={import.meta.env.VITE_CONTEMBER_ADMIN_SESSION_TOKEN}
+      sessionToken={sessionToken}
       project={projectSlug}
       stage="live"
       defaultLocale={"cs-CZ"}
@@ -48,7 +49,4 @@ import { csCZ } from "@contember/admin-i18n";
       }
     />
   );
-} else {
-  // Page not found - redirect to login
-  window.location.href = "/";
 }

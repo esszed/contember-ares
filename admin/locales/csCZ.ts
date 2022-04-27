@@ -97,5 +97,6 @@ export default {
 	"Notification type": "Typ notifikace",
 	"List of pages": "Seznam stránek",
 	"Select pages": "Vyberte stránky",
-	"Notification list": "Seznam notifikací"
+	"Notification list": "Seznam notifikací",
+	"Log out": "Odhlásit se"
 }

@@ -6,7 +6,7 @@ import locale from "../locales";
 export const Layout = (props: { children?: ReactNode }) => (
   <ContemberLayout
     scheme="light"
-    theme="warn"
+    theme="danger"
     // titleTheme="tertiary"
     sidebarHeader={<h3>{locale["App title"]}</h3>}
     navigation={<Navigation />}

@@ -48,13 +48,9 @@ export const Navigation = () => (
     <Menu.Item title="Uživatel">
       <Menu.Item title="Změnit heslo" href="/_panel/security" />
       <Menu.Item title={locale["Settings"]} to="settings" />
-
-      <Link to="index" title="Odhlásit se">
-        <Menu.Item title="Odhlásit se" />
-      </Link>
-      {/* <LogoutLink>
-        <Menu.Item title="Odhlásit se - neklikat" /> 
-      </LogoutLink> */}
+      <LogoutLink>
+        <Menu.Item title={locale["Log out"]} />
+      </LogoutLink>
     </Menu.Item>
   </Menu>
 );
