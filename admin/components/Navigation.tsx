@@ -33,12 +33,10 @@ export const Navigation = () => (
           />
         </EntityListSubTree>
       </DataBindingProvider>
-    </Menu.Item>
-    <Menu.Item>
       <Menu.Item title={locale["Pages"]} to="pageList" />
       <Menu.Item title={locale["Create new page"]} to="pageCreate" />
     </Menu.Item>
-    <Menu.Item>
+    <Menu.Item title={locale["Notifications"]}>
       <Menu.Item title={locale["Notifications"]} to="notificationList" />
       <Menu.Item
         title={locale["Create notification"]}
