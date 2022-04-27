@@ -71,7 +71,7 @@ export const notificationCreate = (
 export const notificationEdit = (
   <EditPage
     entity="Notification(id = $id)"
-    rendererProps={{ title: "Edit Notification" }}
+    rendererProps={{ title: locale["Edit notification"] }}
   >
     <TextField field="content" label="Content" />
     <DateTimeField field="from" label={locale["From"]} />
@@ -85,6 +85,11 @@ export const notificationEdit = (
         { label: "Warning", value: "warning" },
         { label: "Danger", value: "danger" },
       ]}
+    />
+      <MultiSelectField
+      field="pages"
+      label={locale["Select pages"]}
+      options="Page.title"
     />
   </EditPage>
 );

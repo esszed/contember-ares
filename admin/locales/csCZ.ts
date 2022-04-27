@@ -98,5 +98,6 @@ export default {
 	"List of pages": "Seznam stránek",
 	"Select pages": "Vyberte stránky",
 	"Notification list": "Seznam notifikací",
-	"Log out": "Odhlásit se"
+	"Log out": "Odhlásit se",
+	"Edit notification": "Upravit notifikaci",
 }
