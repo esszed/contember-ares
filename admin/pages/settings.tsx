@@ -3,8 +3,8 @@ import { GenericPage, LogoutLink } from "@contember/admin";
 import locale from "../locales";
 
 export const settings = () => (
-  <div>
-    <GenericPage>{locale["Settings"]}</GenericPage>
+  <GenericPage>
+    {locale["Settings"]}
     <LogoutLink>Logout - neklikat</LogoutLink>
-  </div>
+  </GenericPage>
 );
