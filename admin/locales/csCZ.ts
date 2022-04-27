@@ -96,5 +96,6 @@ export default {
 	"Select notification type": "Vybrat typ notifikace",
 	"Notification type": "Typ notifikace",
 	"List of pages": "Seznam stránek",
-	"Select pages": "Vyberte stránky"
+	"Select pages": "Vyberte stránky",
+	"Notification list": "Seznam notifikací"
 }

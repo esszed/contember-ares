@@ -39,7 +39,7 @@ export const Navigation = () => (
       <Menu.Item title={locale["Create new page"]} to="pageCreate" />
     </Menu.Item>
     <Menu.Item title={locale["Notifications"]}>
-      <Menu.Item title={locale["Notifications"]} to="notificationList" />
+      <Menu.Item title={locale["Notification list"]} to="notificationList" />
       <Menu.Item
         title={locale["Create notification"]}
         to="notificationCreate"

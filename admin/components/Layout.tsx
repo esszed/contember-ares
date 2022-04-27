@@ -8,7 +8,7 @@ export const Layout = (props: { children?: ReactNode }) => (
     scheme="light"
     theme="warn"
     // titleTheme="tertiary"
-    sidebarHeader={locale["App title"]}
+    sidebarHeader={<h3>{locale["App title"]}</h3>}
     navigation={<Navigation />}
     children={props.children}
   />
