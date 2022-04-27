@@ -21,7 +21,7 @@ import locale from "../locales";
 export const notificationList = (
   <DataGridPage
     entities="Notification"
-    rendererProps={{ title: "Notifications" }}
+    rendererProps={{ title: locale["Notifications"] }}
   >
     <TextCell field="content" header={locale["Content"]} />
     <TextCell field="type" header={locale["Notification type"]} />

@@ -35,7 +35,7 @@ export const pageList = (
 export const pageCreate = (
   <CreatePage
     entity="Page"
-    rendererProps={{ title: "Create Page" }}
+    rendererProps={{ title: locale["Create new page"] }}
     redirectOnSuccess="pageEdit(id: $entity.id)"
   >
     <TextField field="title" label={locale["Title"]} />
@@ -48,7 +48,7 @@ export const pageCreate = (
 );
 
 export const pageEdit = (
-  <EditPage entity="Page(id = $id)" rendererProps={{ title: "Edit Page" }}>
+  <EditPage entity="Page(id = $id)" rendererProps={{ title: locale["Edit page"] }}>
     <TextField field="title" label={locale["Title"]} />
     <RichTextField field="content" label={locale["Content"]} />
   </EditPage>
