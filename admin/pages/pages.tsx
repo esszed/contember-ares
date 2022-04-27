@@ -26,9 +26,6 @@ export const pageList = (
         <Link to="pageEdit(id: $entity.id)">{locale["Edit"]}</Link>
       </GenericCell>
       <GenericCell shrunk>
-        <Link to="pageEdit(id: $entity.id)">{locale["Edit"]}</Link>
-      </GenericCell>
-      <GenericCell shrunk>
         <DeleteEntityButton immediatePersist />
       </GenericCell>
     </DataGridPage>
