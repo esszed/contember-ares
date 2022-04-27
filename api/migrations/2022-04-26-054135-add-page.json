@@ -1,0 +1,76 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Page",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "page"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "content",
+				"columnName": "content",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page",
+					"value": {
+						"predicates": {},
+						"operations": {
+							"create": {
+								"id": true,
+								"title": true,
+								"content": true
+							},
+							"read": {
+								"id": true,
+								"title": true,
+								"content": true
+							},
+							"update": {
+								"id": true,
+								"title": true,
+								"content": true
+							},
+							"delete": true
+						}
+					}
+				}
+			]
+		}
+	]
+}

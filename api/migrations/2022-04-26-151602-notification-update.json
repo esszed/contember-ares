@@ -1,0 +1,48 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createEnum",
+			"enumName": "NotificationEnum",
+			"values": [
+				"Success",
+				"Info",
+				"Warning",
+				"Error"
+			]
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Notification",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"default": "Info",
+				"type": "Enum",
+				"columnType": "NotificationEnum"
+			},
+			"fillValue": "Info"
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/create/type",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/read/type",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/update/type",
+					"value": true
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createColumn",
+			"entityName": "Notification",
+			"field": {
+				"name": "pages",
+				"columnName": "pages",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/create/pages",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/read/pages",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/update/pages",
+					"value": true
+				}
+			]
+		}
+	]
+}

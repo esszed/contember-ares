@@ -1,0 +1,16 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "updateColumnDefinition",
+			"entityName": "Notification",
+			"fieldName": "type",
+			"definition": {
+				"nullable": false,
+				"default": "info",
+				"type": "Enum",
+				"columnType": "NotificationEnum"
+			}
+		}
+	]
+}

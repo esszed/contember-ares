@@ -1,0 +1,15 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "updateEnum",
+			"enumName": "NotificationEnum",
+			"values": [
+				"success",
+				"info",
+				"warning",
+				"error"
+			]
+		}
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Notification",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "notification"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Notification",
+			"field": {
+				"name": "content",
+				"columnName": "content",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Notification",
+			"field": {
+				"name": "from",
+				"columnName": "from",
+				"nullable": true,
+				"type": "Date",
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Notification",
+			"field": {
+				"name": "to",
+				"columnName": "to",
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification",
+					"value": {
+						"predicates": {},
+						"operations": {
+							"create": {
+								"id": true,
+								"content": true,
+								"from": true,
+								"to": true
+							},
+							"read": {
+								"id": true,
+								"content": true,
+								"from": true,
+								"to": true
+							},
+							"update": {
+								"id": true,
+								"content": true,
+								"from": true,
+								"to": true
+							},
+							"delete": true
+						}
+					}
+				}
+			]
+		}
+	]
+}
