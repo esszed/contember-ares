@@ -1,0 +1,72 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "removeField",
+			"entityName": "Notification",
+			"fieldName": "pages"
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Notification",
+			"owningSide": {
+				"type": "ManyHasMany",
+				"name": "pages",
+				"inversedBy": "notifications",
+				"target": "Page",
+				"joiningTable": {
+					"tableName": "notification_pages",
+					"joiningColumn": {
+						"columnName": "notification_id",
+						"onDelete": "cascade"
+					},
+					"inverseJoiningColumn": {
+						"columnName": "page_id",
+						"onDelete": "cascade"
+					}
+				}
+			},
+			"inverseSide": {
+				"name": "notifications",
+				"ownedBy": "pages",
+				"target": "Notification",
+				"type": "ManyHasMany"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/create/notifications",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/update/notifications",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/read/notifications",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/create/pages",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/update/pages",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Notification/operations/read/pages",
+					"value": true
+				}
+			]
+		}
+	]
+}

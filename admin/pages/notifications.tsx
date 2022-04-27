@@ -15,6 +15,7 @@ import {
   FieldView,
   DateTimeField,
   SelectField,
+  MultiSelectField,
 } from "@contember/admin";
 import locale from "../locales";
 
@@ -58,6 +59,11 @@ export const notificationCreate = (
         { label: "Warning", value: "warning" },
         { label: "Danger", value: "danger" },
       ]}
+    />
+    <MultiSelectField
+      field="pages"
+      label={locale["Select pages"]}
+      options="Page.title"
     />
   </CreatePage>
 );
