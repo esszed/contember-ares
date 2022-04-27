@@ -94,5 +94,6 @@ export default {
 	"From": "Od",
 	"To": "Do",
 	"Select notification type": "Vybrat typ notifikace",
-	"Notification type": "Typ notifikace"
+	"Notification type": "Typ notifikace",
+	"List of pages": "Seznam stránek"
 }

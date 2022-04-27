@@ -16,12 +16,15 @@ import {
   AnchorButton,
   PersistButton,
 } from "@contember/admin";
-import locale from "../locales"
+import locale from "../locales";
 
 export const pageList = (
   <div>
     <DataGridPage entities="Page" rendererProps={{ title: locale["Pages"] }}>
-      <TextCell field="title" header="Title" />
+      <TextCell field="title" header={locale["Title"]} />
+      <GenericCell shrunk>
+        <Link to="pageEdit(id: $entity.id)">{locale["Edit"]}</Link>
+      </GenericCell>
       <GenericCell shrunk>
         <Link to="pageEdit(id: $entity.id)">{locale["Edit"]}</Link>
       </GenericCell>
@@ -38,8 +41,8 @@ export const pageCreate = (
     rendererProps={{ title: "Create Page" }}
     redirectOnSuccess="pageEdit(id: $entity.id)"
   >
-    <TextField field="title" label="Title" />
-    <RichTextField field="content" label="Content" />
+    <TextField field="title" label={locale["Title"]} />
+    <RichTextField field="content" label={locale["Content"]} />
     {/* <FieldView
       field="title"
       render={(fieldAccessor) => <>{fieldAccessor.value}</>}
@@ -49,7 +52,7 @@ export const pageCreate = (
 
 export const pageEdit = (
   <EditPage entity="Page(id = $id)" rendererProps={{ title: "Edit Page" }}>
-    <TextField field="title" label="Title" />
-    <RichTextField field="content" label="Content" />
+    <TextField field="title" label={locale["Title"]} />
+    <RichTextField field="content" label={locale["Content"]} />
   </EditPage>
 );
