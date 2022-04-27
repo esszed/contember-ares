@@ -6,7 +6,6 @@ import {
   EntityListSubTree,
   FieldView,
   FeedbackRenderer,
-  Link,
 } from "@contember/admin";
 import locale from "../locales";
 import { UserBox } from "./userBox";
@@ -15,11 +14,11 @@ export const Navigation = () => (
     <Menu.Item>
       <UserBox />
     </Menu.Item>
-    <Menu.Item title={locale["Dashboard"]} to="index" />
     <Menu.Item title={locale["Pages"]}>
       <DataBindingProvider
         stateComponent={FeedbackRenderer}
         refreshOnEnvironmentChange={false}
+        refreshOnPersist={true}
       >
         <EntityListSubTree entities="Page" orderBy="title">
           <FieldView

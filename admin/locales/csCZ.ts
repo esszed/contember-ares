@@ -84,7 +84,7 @@ export default {
 	'Type': 'Typ',
 	'Url': 'Url',
 	'Viewed': 'Zobrazeno',
-	'Welcome message': 'Vítejte v admin panelu pro projekt Ares',
+	'Welcome message': 'Vítejte v admin panelu pro projekt ARES',
 	'Create notification': 'Vytvořit notifikaci',
 	'Notifications': 'Notifikace',
 	'Dashboard': 'Dashboard',
