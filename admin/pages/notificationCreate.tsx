@@ -19,8 +19,14 @@ export const notificationCreate = (
         field="title"
         render={(fieldAccessor) => <>{fieldAccessor.value}</>}
       /> */}
-    <DateTimeField field="from" label={locale["From"]} />
-    <DateTimeField field="to" label={locale["To"]} />
+    <table>
+      <td>
+        <DateTimeField field="from" label={locale["From"]} />
+      </td>
+      <td>
+        <DateTimeField field="to" label={locale["To"]} />
+      </td>
+    </table>
     <SelectField
       field="type"
       label={locale["Select notification type"]}

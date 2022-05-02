@@ -1,0 +1,62 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "created",
+				"columnName": "created",
+				"nullable": true,
+				"type": "Date",
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "updated",
+				"columnName": "updated",
+				"nullable": true,
+				"type": "Date",
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/create/created",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/create/updated",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/update/created",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/update/updated",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/read/created",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Page/operations/read/updated",
+					"value": true
+				}
+			]
+		}
+	]
+}

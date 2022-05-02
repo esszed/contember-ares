@@ -20,12 +20,12 @@ export const Navigation = () => (
         refreshOnEnvironmentChange={false}
         refreshOnPersist={true}
       >
-        <EntityListSubTree entities="Page" orderBy="title">
+        <EntityListSubTree entities="Page" orderBy="name">
           <FieldView
-            fields={["title", "id"]}
-            render={({ value: title }, { value: id }) => (
+            fields={["name", "id"]}
+            render={({ value: name }, { value: id }) => (
               <Menu.Item
-                title={title}
+                title={name}
                 to={{ pageName: "pageEdit", parameters: { id } }}
               />
             )}

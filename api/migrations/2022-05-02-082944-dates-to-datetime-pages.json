@@ -1,0 +1,25 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "updateColumnDefinition",
+			"entityName": "Page",
+			"fieldName": "createdAt",
+			"definition": {
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "updateColumnDefinition",
+			"entityName": "Page",
+			"fieldName": "updatedAt",
+			"definition": {
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		}
+	]
+}

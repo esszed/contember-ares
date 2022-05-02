@@ -80,7 +80,7 @@ export default {
 	'Testimonial': 'Doporučení',
 	'Testimonials': 'Doporučení',
 	'Text': 'Text',
-	'Title': 'Titul',
+	'Title': 'Titulek',
 	'Type': 'Typ',
 	'Url': 'Url',
 	'Viewed': 'Zobrazeno',
@@ -100,4 +100,7 @@ export default {
 	"Notification list": "Seznam notifikací",
 	"Log out": "Odhlásit se",
 	"Edit notification": "Upravit notifikaci",
+	"Page name": "Název stránky",
+	"Created": "Vytvořeno",
+	"Last update": "Naposledy upraveno"
 }
